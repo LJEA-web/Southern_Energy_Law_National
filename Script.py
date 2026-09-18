@@ -50,7 +50,7 @@ if response.status_code == 200:
     df = pd.DataFrame(press_releases)
     print(f"Successfully loaded {len(df)} recent North Carolina press releases!")
     # Save using the lowercase filename the workflow expects
-    df.to_csv('SELC.csv', index=False)
+    df.to_csv('National_SELC.csv', index=False)
 else:
     print(f"Failed to fetch page. Status code: {response.status_code}")
     # create an empty CSV so the workflow's git add/commit step still has a file to work with
